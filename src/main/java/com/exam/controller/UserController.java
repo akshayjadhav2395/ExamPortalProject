@@ -24,6 +24,8 @@ import com.exam.service.UserService;
 @CrossOrigin("*")
 public class UserController {
 
+	//user controller
+	
 	@Autowired
 	private UserService userService;
 	
