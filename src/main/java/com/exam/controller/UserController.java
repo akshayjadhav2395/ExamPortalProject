@@ -29,6 +29,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	//create user
 	@PostMapping("/")
 	public User crateUser(@RequestBody User user) throws Exception
 	{
@@ -48,18 +49,21 @@ public class UserController {
 		return userService.createUser(user, roles);
 	}
 	
+	//getAll user
 	@GetMapping("/{username}")
 	public User getUser(@PathVariable String username)
 	{
 		return userService.getUser(username);
 	}
 	
+	//edit user
 	@PutMapping("/{username}")
 	public User editUser(@RequestBody User user, @PathVariable String username)
 	{
 		return userService.editUser(user, username);
 	}
 	
+	//delete user
 	@DeleteMapping("/{uid}")
 	public void deleteUser(@PathVariable int uid)
 	{
